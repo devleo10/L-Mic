@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌌 L-Mic
 
-## Getting Started
+A beautiful, lightweight, and blazingly fast web application to test your microphone quality before jumping into your next online meeting. Built with a premium deep space aesthetic, L-Mic provides real-time audio visualization and one-click recording and playback capabilities.
 
-First, run the development server:
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Real-time Audio Visualizer**: A buttery-smooth, neon-cyan audio visualizer utilizing the Web Audio API and HTML5 Canvas to map frequency bins in real-time.
+- **One-Click Recording**: Instantly record audio using the native `MediaRecorder` API. 
+- **Playback & Download**: Play your recording back right on the page to hear exactly how you'll sound to others, or download it as a `.webm` file.
+- **Microphone Management**: Safely request microphone permissions and handle system cleanup without any memory leaks.
+- **Premium Aesthetics**: Stunning glassmorphism UI overlaying a high-definition space background with dynamic text glow and micro-animations.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Quick Start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ensure you have Node.js installed, then:
 
-## Learn More
+1. **Clone the repository** (if applicable) or navigate to the project directory:
+   ```bash
+   cd L-Mic
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Open in Browser**: Navigate to [http://localhost:3000](http://localhost:3000) to see L-Mic running.
 
-## Deploy on Vercel
+## 🛠️ Behind the Code
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The audio visualization is handled by a custom React Hook (`useAudioAnalyzer`) which:
+1. Connects the user's `MediaStream` to an `AudioContext`.
+2. Passes it through an `AnalyserNode` tailored with a refined `fftSize` and soft `smoothingTimeConstant` for visual stability.
+3. Extracts the buffer lengths and paints beautifully rounded pill bars natively onto a ref-bound `<canvas>` using `requestAnimationFrame`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧑‍💻 Author
+**Built by [DevLeo](https://devleo.in)**
