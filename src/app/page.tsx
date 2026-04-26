@@ -188,7 +188,11 @@ export default function Home() {
       </div>
 
       <div style={{ position: 'fixed', bottom: '24px', left: '0', width: '100%', textAlign: 'center', fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', zIndex: 50, letterSpacing: '0.5px' }}>
-        Built by <a href="https://devleo.in" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontWeight: '500' }}>DevLeo</a>
+        Built by <a href="https://devleo.in" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontWeight: '500' }}>devLeo</a>
+        <span style={{ margin: '0 0.65rem', color: 'rgba(255,255,255,0.35)' }}>•</span>
+        <a href="https://github.com/devleo10/L-Mic" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontWeight: '500' }}>
+          Star the repo
+        </a>
       </div>
     </main>
   );
