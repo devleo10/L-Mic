@@ -68,7 +68,27 @@ export default function Home() {
 
           <p className="sr-only" aria-live="polite" aria-atomic="true">{statusAnnouncement}</p>
 
-          <h1>L-Mic</h1>
+          <h1>
+            <span aria-hidden="true" style={{ display: 'inline-flex', alignItems: 'center', marginRight: '0.45rem', verticalAlign: 'middle', color: 'rgba(255,255,255,0.8)' }}>
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M13 9.5 C 18 9.5, 21.5 13, 21.5 18" opacity="0.8" />
+                <path d="M13 16.5 C 8 16.5, 4.5 13, 4.5 8" opacity="0.8" />
+                <path d="M16.5 13 C 16.5 18, 13 21.5, 8 21.5" opacity="0.8" />
+                <path d="M9.5 13 C 9.5 8, 13 4.5, 18 4.5" opacity="0.8" />
+                <circle cx="13" cy="13" r="3" fill="currentColor" stroke="none" opacity="0.95" />
+                <circle cx="13" cy="13" r="5" stroke="currentColor" strokeDasharray="1 3" opacity="0.6" strokeWidth="1.5" />
+                <circle cx="19.5" cy="16.5" r="1.5" fill="currentColor" stroke="none" opacity="0.9" />
+                <circle cx="6.5" cy="9.5" r="1.5" fill="currentColor" stroke="none" opacity="0.9" />
+                <circle cx="9.5" cy="19.5" r="1.5" fill="currentColor" stroke="none" opacity="0.9" />
+                <circle cx="16.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" opacity="0.9" />
+                <circle cx="22" cy="7" r="1" fill="currentColor" stroke="none" opacity="0.6" />
+                <circle cx="4" cy="19" r="1" fill="currentColor" stroke="none" opacity="0.6" />
+                <circle cx="20" cy="21" r="0.6" fill="currentColor" stroke="none" opacity="0.5" />
+                <circle cx="6" cy="5" r="0.6" fill="currentColor" stroke="none" opacity="0.5" />
+              </svg>
+            </span>
+            L-Mic
+          </h1>
           <p className="subtitle">Test your microphone quality instantly before your next meeting.</p>
 
           <div className="device-controls">
@@ -118,7 +138,7 @@ export default function Home() {
                 <span>Input Level</span>
                 <span>{inputLevel}% • {qualityLabel}</span>
               </div>
-              <div className="level-track" role="meter" aria-label="Microphone input level" aria-valuemin={0} aria-valuemax={100} aria-valuenow={inputLevel} aria-valuetext={`${inputLevel} percent`}> 
+              <div className="level-track" role="meter" aria-label="Microphone input level" aria-valuemin={0} aria-valuemax={100} aria-valuenow={inputLevel} aria-valuetext={`${inputLevel} percent`}>
                 <div className={`level-fill ${inputQuality}`} style={{ width: `${Math.max(4, inputLevel)}%` }} />
               </div>
               <p className="recommendation" aria-live="polite">Tip: {recommendation}</p>

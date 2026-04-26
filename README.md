@@ -1,6 +1,6 @@
 # 🌌 L-Mic
 
-A beautiful, lightweight, and blazingly fast web application to test your microphone quality before jumping into your next online meeting. Built with a premium deep space aesthetic, L-Mic provides real-time audio visualization and one-click recording and playback capabilities.
+A beautiful, lightweight, and blazingly fast web application to test your microphone quality before jumping into your next online meeting. Built with a premium deep space aesthetic—complete with a mesmerizing Milky Way pinwheel galaxy logo—L-Mic provides real-time audio visualization and one-click recording and playback capabilities.
 
 **Live demo:** [https://lmic.tech](https://lmic.tech)
 
